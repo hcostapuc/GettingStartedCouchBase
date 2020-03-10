@@ -73,18 +73,5 @@ namespace API.Controllers
             else
                 return BadRequest(result.Exception);
         }
-        /*
-         
-        docker run -d --name db -p 8091-8094:8091-8094 -p 11210:11210 couchbase
-
-        http://localhost:8091
-
-         CREATE INDEX ix_type ON demo(type)
-
-            SELECT g.*, META(g).id
-            FROM demo g
-            WHERE g.type = 'WishListItem';
-         
-         */
     }
 }
