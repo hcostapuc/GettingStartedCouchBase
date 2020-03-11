@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using API.Models;
+﻿using API.Models;
 using Couchbase;
 using Couchbase.Core;
 using Couchbase.N1QL;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace API.Controllers
 {
@@ -55,7 +52,8 @@ namespace API.Controllers
 
             //chave sera o id e o valor sera o wishlistitem
             Bucket.Upsert(item.Id.ToString(), new
-            WishListItem{
+            WishListItem
+            {
                 Name = item.Name
             });
             return Ok(item);
